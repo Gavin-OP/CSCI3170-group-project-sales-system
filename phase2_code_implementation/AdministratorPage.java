@@ -56,7 +56,7 @@ public class AdministratorPage extends Page {
                         // Administrator.loadDataFromFiles(conn);
                         // if loadDataFromFiles() throws an exception, the following line will not be executed, break
                         try {
-                            Administrator.createAllTables(conn);
+                            Administrator.loadDataFromFiles(conn);
                         } catch (SQLException e) {
                             System.err.println("Error: " + e.getMessage());
                             break;
