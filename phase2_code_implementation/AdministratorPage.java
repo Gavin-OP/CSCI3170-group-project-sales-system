@@ -53,7 +53,14 @@ public class AdministratorPage extends Page {
                         System.out.println("Tables deleted successfully.");
                         break;
                     case 3:
-                        Administrator.loadDataFromFiles(conn);
+                        // Administrator.loadDataFromFiles(conn);
+                        // if loadDataFromFiles() throws an exception, the following line will not be executed, break
+                        try {
+                            Administrator.createAllTables(conn);
+                        } catch (SQLException e) {
+                            System.err.println("Error: " + e.getMessage());
+                            break;
+                        }
                         System.out.println("Data loaded successfully.");
                         break;
                     case 4:

@@ -113,8 +113,7 @@ public class Administrator extends Operation {
             System.err.println("Error!");
             System.err.println("Please make sure the folder path is correct and all tables are created");
             System.err.println();
-            // catch the error and return to the main menu
-            system.out.println();
+            // catch the error and return to the main menu, break
         }
     }
 
