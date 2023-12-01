@@ -4,54 +4,54 @@ import java.io.IOException;
 
 public class Page {
 
-    public static int takeChoiceInput(int min, int max) {
-        String input;
-        Scanner sc = new Scanner(System.in);
-
-        while (true) {
-            System.out.print("Enter Your Choice: ");
-            input = sc.next();
-
-            if (!input.matches(".*[a-zA-Z]+.*") && Integer.parseInt(input) >= min && Integer.parseInt(input) <= max) {
-                return Integer.parseInt(input);
-            }
-            else {
-                System.out.printf("\nInvalid input\n");
-            }
-        }
-    }
-
     // public static int takeChoiceInput(int min, int max) {
+    //     String input;
     //     Scanner sc = new Scanner(System.in);
 
-    //     try {
-    //         while (true) {
-    //             try {
-    //                 System.out.print("Enter Your Choice: ");
-    //                 String input = sc.next();
+    //     while (true) {
+    //         System.out.print("Enter Your Choice: ");
+    //         input = sc.next();
 
-    //                 if (!input.matches(".*[a-zA-Z]+.*")) {
-    //                     int choice = Integer.parseInt(input);
-    //                     if (choice >= min && choice <= max) {
-    //                         return choice;
-    //                     } else {
-    //                         System.out.println("\nInvalid input. Please enter a valid choice within the specified range.");
-    //                     }
-    //                 } else {
-    //                     System.out.println("\nInvalid input. Please enter a valid integer.");
-    //                 }
-    //             } catch (NumberFormatException e) {
-    //                 System.out.println("\nInvalid input. Please enter a valid integer.");
-    //                 sc.nextLine(); // Consume the invalid input to prevent an infinite loop
-    //             } catch (Exception e) {
-    //                 System.out.println("\nInvalid input. Please enter a valid integer.");
-    //                 sc.nextLine(); // Consume the invalid input to prevent an infinite loop
-    //             }
+    //         if (!input.matches(".*[a-zA-Z]+.*") && Integer.parseInt(input) >= min && Integer.parseInt(input) <= max) {
+    //             return Integer.parseInt(input);
     //         }
-    //     } finally {
-    //         sc.close(); // Close the Scanner to release resources
+    //         else {
+    //             System.out.printf("\nInvalid input\n");
+    //         }
     //     }
     // }
+
+    public static int takeChoiceInput(int min, int max) {
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            while (true) {
+                try {
+                    System.out.print("Enter Your Choice: ");
+                    String input = sc.next();
+
+                    if (!input.matches(".*[a-zA-Z]+.*")) {
+                        int choice = Integer.parseInt(input);
+                        if (choice >= min && choice <= max) {
+                            return choice;
+                        } else {
+                            System.out.println("\nInvalid input. Please enter a valid choice within the specified range.");
+                        }
+                    } else {
+                        System.out.println("\nInvalid input. Please enter a valid integer.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("\nInvalid input. Please enter a valid integer.");
+                    sc.nextLine(); // Consume the invalid input to prevent an infinite loop
+                } catch (Exception e) {
+                    System.out.println("\nInvalid input. Please enter a valid integer.");
+                    sc.nextLine(); // Consume the invalid input to prevent an infinite loop
+                }
+            }
+        } finally {
+            sc.close(); // Close the Scanner to release resources
+        }
+    }
 
 
 
@@ -108,7 +108,7 @@ public class Page {
     public static void pressEnterToContinue() {
         System.out.print("Press ENTER to continue...");
         try (Scanner sc = new Scanner(System.in)) {
-            sc.nextLine(); // Consume the newline character
+            // sc.nextLine(); // Consume the newline character
         } catch (Exception e) {
             e.printStackTrace();
         }
