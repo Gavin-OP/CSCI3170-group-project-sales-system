@@ -2,23 +2,6 @@ import java.util.Scanner;
 
 public class Page {
 
-    // public static int takeChoiceInput(int min, int max) {
-    //     String input;
-    //     Scanner sc = new Scanner(System.in);
-    //     while (true) {
-    //         System.out.print("Enter Your Choice: ");
-    //         input = sc.next();
-
-    //         if (!input.matches(".*[a-zA-Z]+.*") && Integer.parseInt(input) >= min && Integer.parseInt(input) <= max) {
-    //             return Integer.parseInt(input);
-    //         }
-    //         else {
-    //             System.out.printf("\nInvalid input\n");
-    //         }
-    //     }
-    // }
-
-
     public static int takeChoiceInput(int min, int max) {
         Scanner sc = new Scanner(System.in);
 
@@ -46,10 +29,6 @@ public class Page {
             }
         }
     }
-
-
-
-
 
 
     public static String takeStringInput() {
