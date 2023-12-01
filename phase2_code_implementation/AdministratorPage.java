@@ -57,11 +57,11 @@ public class AdministratorPage extends Page {
                         // if loadDataFromFiles() throws an exception, the following line will not be executed, break
                         try {
                             Administrator.loadDataFromFiles(conn);
+                            System.out.println("Data loaded successfully.");
                         } catch (SQLException e) {
                             System.err.println("Error: " + e.getMessage());
                             break;
                         }
-                        System.out.println("Data loaded successfully.");
                         break;
                     case 4:
                         Administrator.showContent(conn);
