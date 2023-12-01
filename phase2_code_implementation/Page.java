@@ -29,6 +29,9 @@ public class Page {
                 System.out.println("\nInvalid input. Please enter a valid integer.");
                 // sc.nextLine(); // Consume the invalid input to prevent an infinite loop
             }
+            finally {
+                sc.close();
+            }
         }
     }
 
