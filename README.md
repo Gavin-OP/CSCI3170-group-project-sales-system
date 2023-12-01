@@ -57,5 +57,6 @@ PRs and [issues](https://github.com/Gavin-OP/csci3170_group_project_sales_system
 
 ## License
 
-[MIT © Gavin-OP.](./LICENSE)
+[UNLICENSE](./LICENSE)
+
 
