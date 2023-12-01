@@ -7,11 +7,11 @@ public class Page {
             while (true) {
                 System.out.print("Enter Your Choice: ");
 
-                if (sc.hasNext()) {
-                    String input = sc.next();
+                String inputLine = sc.nextLine().trim();
 
+                if (!inputLine.isEmpty()) {
                     try {
-                        int choice = Integer.parseInt(input);
+                        int choice = Integer.parseInt(inputLine);
                         if (choice >= min && choice <= max) {
                             return choice;
                         } else {
@@ -22,11 +22,11 @@ public class Page {
                     }
                 } else {
                     System.out.println("\nNo input detected. Please try again.\n");
-                    sc.nextLine(); // Consume the newline character
                 }
             }
         }
     }
+
 
 
     public static String takeStringInput() {
