@@ -28,7 +28,7 @@ Group members:
     ```bash
     cd csci3170_group_project_sales_system/phase2_code_implementation
     ```
-   
+
 ## Usage
 
 1. Remove existing class files by using the following command:
@@ -57,6 +57,5 @@ PRs and [issues](https://github.com/Gavin-OP/csci3170_group_project_sales_system
 
 ## License
 
-[UNLICENSE](./LICENSE)
-
+[UNLICENSE](../Public/LICENSE)
 
