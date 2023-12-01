@@ -56,17 +56,15 @@ public class Page {
 
 
     public static String takeStringInput() {
-        try (Scanner sc = new Scanner(System.in)) {
-            return sc.nextLine();
-        }
-        catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
-            return null;
-        }
-        finally {
-            // sc.next; // Close the Scanner to release resources
-        }
+    try (Scanner sc = new Scanner(System.in)) {
+        return sc.nextLine();
+    } catch (Exception e) {
+        System.out.println("Error: " + e.getMessage());
+        return null;
     }
+    }
+
+
 
     public static void printMainMenu() {
         System.out.println("Welcome to the sales system!\n");
