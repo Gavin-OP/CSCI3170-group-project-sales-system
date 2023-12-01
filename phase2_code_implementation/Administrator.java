@@ -9,8 +9,8 @@ public class Administrator extends Operation {
             "CREATE TABLE IF NOT EXISTS category (" +
                     "cID INT NOT NULL AUTO_INCREMENT," +
                     "cNname VARCHAR(20) NOT NULL," +
-                    "PRIMARY KEY (cID)," +
-                    "CHECK (cID > 0 AND cID <= 9)" + 
+                    "PRIMARY KEY (cID)" +
+                    // "CHECK (cID > 0 AND cID <= 9)" + 
             ")";
 
     private static final String CREATE_MANUFACTURER =
@@ -19,9 +19,9 @@ public class Administrator extends Operation {
                     "mName VARCHAR(20) NOT NULL," +
                     "mAddress VARCHAR(50) NOT NULL," +
                     "mPhoneNumber INT NOT NULL," +
-                    "PRIMARY KEY (mID)," +
-                    "CHECK (mID > 0 AND mID <= 99)," +
-                    "CHECK (mPhoneNumber >= 10000000 AND mPhoneNumber <= 99999999)" +
+                    "PRIMARY KEY (mID)" +
+                    // "CHECK (mID > 0 AND mID <= 99)," +
+                    // "CHECK (mPhoneNumber >= 10000000 AND mPhoneNumber <= 99999999)" +
             ")";
 
     private static final String CREATE_PART =
@@ -35,13 +35,13 @@ public class Administrator extends Operation {
                     "mID INT NOT NULL," +
                     "PRIMARY KEY (pID)," +
                     "FOREIGN KEY (mID) REFERENCES manufacturer(mID)," +
-                    "FOREIGN KEY (cID) REFERENCES category(cID)," +
-                    "CHECK (pID > 0 AND pID <= 999)," +
-                    "CHECK (pPrice > 0 AND pPrice < 100000)," +
-                    "CHECK (mID > 0 AND mID <= 99)," +
-                    "CHECK (cID > 0 AND cID <= 9)," +
-                    "CHECK (pWarrantyPeriod > 0 AND pWarrantyPeriod <= 99)," +
-                    "CHECK (pAvailableQuantity > 0 AND pAvailableQuantity < 100)" +
+                    "FOREIGN KEY (cID) REFERENCES category(cID)" +
+                    // "CHECK (pID > 0 AND pID <= 999)," +
+                    // "CHECK (pPrice > 0 AND pPrice < 100000)," +
+                    // "CHECK (mID > 0 AND mID <= 99)," +
+                    // "CHECK (cID > 0 AND cID <= 9)," +
+                    // "CHECK (pWarrantyPeriod > 0 AND pWarrantyPeriod <= 99)," +
+                    // "CHECK (pAvailableQuantity > 0 AND pAvailableQuantity < 100)" +
             ")";
 
     private static final String CREATE_SALESPERSON =
@@ -51,10 +51,10 @@ public class Administrator extends Operation {
                     "sAddress VARCHAR(50) NOT NULL," +
                     "sPhoneNumber INT NOT NULL," +
                     "sExperience INT NOT NULL," +
-                    "PRIMARY KEY (sID)," +
-                    "CHECK (sID > 0 AND sID <= 99)," +
-                    "CHECK (sPhoneNumber >= 10000000 AND sPhoneNumber <= 99999999)," +
-                    "CHECK (sExperience >= 1 AND sExperience <= 9)" +
+                    "PRIMARY KEY (sID)" +
+                    // "CHECK (sID > 0 AND sID <= 99)," +
+                    // "CHECK (sPhoneNumber >= 10000000 AND sPhoneNumber <= 99999999)," +
+                    // "CHECK (sExperience >= 1 AND sExperience <= 9)" +
             ")";
 
     private static final String CREATE_TRANSACTION =
@@ -65,11 +65,11 @@ public class Administrator extends Operation {
                     "sID INT NOT NULL," +
                     "PRIMARY KEY (tID)," +
                     "FOREIGN KEY (pID) REFERENCES part(pID)," +
-                    "FOREIGN KEY (sID) REFERENCES salesperson(sID)," +
-                    "CHECK (tID > 0 AND tID <= 9999)," +
-                    "CHECK (STR_TO_DATE(tDate, '%d/%m/%Y'))," + 
-                    "CHECK (pID > 0 AND pID <= 999)," +
-                    "CHECK (sID > 0 AND sID <= 99)" +
+                    "FOREIGN KEY (sID) REFERENCES salesperson(sID)" +
+                    // "CHECK (tID > 0 AND tID <= 9999)," +
+                    // "CHECK (STR_TO_DATE(tDate, '%d/%m/%Y'))," + 
+                    // "CHECK (pID > 0 AND pID <= 999)," +
+                    // "CHECK (sID > 0 AND sID <= 99)" +
             ")";
     private static final String[] createTables = {CREATE_CATEGORY, CREATE_MANUFACTURER, CREATE_PART, CREATE_SALESPERSON, CREATE_TRANSACTION};
 
