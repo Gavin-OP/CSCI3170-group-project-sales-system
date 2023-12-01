@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.io.IOException;
 
 
+// static menu output
 public class Page {
 
     public static int takeChoiceInput(int min, int max) {
@@ -20,8 +21,6 @@ public class Page {
             }
         }
     }
-
-
 
 
     public static String takeStringInput() {
