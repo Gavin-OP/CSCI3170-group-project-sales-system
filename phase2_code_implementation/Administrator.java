@@ -52,7 +52,7 @@ public class Administrator extends Operation {
                     "sExperience INT NOT NULL," +
                     "PRIMARY KEY (sID)," +
                     "CHECK (sID > 0 AND sID <= 99)," +
-                    "CEHCK (sPhoneNumber >= 10000000 AND sPhoneNumber <= 99999999)," +
+                    "CHECK (sPhoneNumber >= 10000000 AND sPhoneNumber <= 99999999)," +
                     "CHECK (sExperience >= 1 AND sExperience <= 9)" +
             ")";
 
