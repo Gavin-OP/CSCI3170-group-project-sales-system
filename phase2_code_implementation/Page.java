@@ -7,33 +7,35 @@ public class Page {
     public static int takeChoiceInput(int min, int max) {
         Scanner sc = new Scanner(System.in);
 
-        while (true) {
-            try {
-                System.out.print("Enter Your Choice: ");
-                String input = sc.next();
+        try {
+            while (true) {
+                try {
+                    System.out.print("Enter Your Choice: ");
+                    String input = sc.next();
 
-                if (!input.matches(".*[a-zA-Z]+.*")) {
-                    int choice = Integer.parseInt(input);
-                    if (choice >= min && choice <= max) {
-                        return choice;
+                    if (!input.matches(".*[a-zA-Z]+.*")) {
+                        int choice = Integer.parseInt(input);
+                        if (choice >= min && choice <= max) {
+                            return choice;
+                        } else {
+                            System.out.println("\nInvalid input. Please enter a valid choice within the specified range.");
+                        }
                     } else {
-                        System.out.println("\nInvalid input. Please enter a valid choice within the specified range.");
+                        System.out.println("\nInvalid input. Please enter a valid integer.");
                     }
-                } else {
+                } catch (NumberFormatException e) {
                     System.out.println("\nInvalid input. Please enter a valid integer.");
+                    sc.nextLine(); // Consume the invalid input to prevent an infinite loop
+                } catch (Exception e) {
+                    System.out.println("\nInvalid input. Please enter a valid integer.");
+                    sc.nextLine(); // Consume the invalid input to prevent an infinite loop
                 }
-            } catch (NumberFormatException e) {
-                System.out.println("\nInvalid input. Please enter a valid integer.");
-                // sc.nextLine(); // Consume the invalid input to prevent an infinite loop
-            } catch (Exception e) {
-                System.out.println("\nInvalid input. Please enter a valid integer.");
-                // sc.nextLine(); // Consume the invalid input to prevent an infinite loop
             }
-            finally {
-                sc.close();
-            }
+        } finally {
+            sc.close(); // Close the Scanner to release resources
         }
     }
+
 
 
     public static String takeStringInput() {
