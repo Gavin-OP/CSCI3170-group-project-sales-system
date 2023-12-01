@@ -71,6 +71,7 @@ public class Administrator extends Operation {
                     "CHECK (pID > 0 AND pID <= 999)," +
                     "CHECK (sID > 0 AND sID <= 99)" +
             ")";
+    private static final String[] createTables = {CREATE_CATEGORY, CREATE_MANUFACTURER, CREATE_PART, CREATE_SALESPERSON, CREATE_TRANSACTION};
 
     // Delete tables
     private static final String DELETE_TRANSACTION = "DROP TABLE IF EXISTS transaction";
@@ -78,15 +79,15 @@ public class Administrator extends Operation {
     private static final String DELETE_PART = "DROP TABLE IF EXISTS part";
     private static final String DELETE_MANUFACTURER = "DROP TABLE IF EXISTS manufacturer;";
     private static final String DELETE_CATEGORY = "DROP TABLE IF EXISTS category";
+    private static final String[] deleteTables = {DELETE_TRANSACTION, DELETE_SALESPERSON, DELETE_PART, DELETE_MANUFACTURER, DELETE_CATEGORY};
 
     // Load data
     private static String currentPath = System.getProperty("user.dir");
     private static final String LOAD_DATA = "LOAD DATA LOCAL INFILE '" + currentPath + "/";
-    private static final String[] createTables = {CREATE_CATEGORY, CREATE_MANUFACTURER, CREATE_PART, CREATE_SALESPERSON, CREATE_TRANSACTION};
-    private static final String[] deleteTables = {DELETE_TRANSACTION, DELETE_SALESPERSON, DELETE_PART, DELETE_MANUFACTURER, DELETE_CATEGORY};
     private static final String[] tableNames = {"category", "manufacturer", "part", "salesperson", "transaction"};
     private static final Set<String> tables = new HashSet<>(Arrays.asList("transaction", "salesperson", "part", "manufacturer", "category"));
 
+    // Create all table functions
     public static void createAllTables(Connection conn) throws SQLException {
         System.out.print("Processing...");
         Statement stmt = conn.createStatement();
@@ -98,6 +99,8 @@ public class Administrator extends Operation {
         System.out.println("Done! Database is initialized!");
         System.out.println();
     }
+
+    // Delete all table functions
     public static void deleteAllTables(Connection conn) throws SQLException {
         System.out.print("Processing...");
         Statement stmt = conn.createStatement();
@@ -119,6 +122,7 @@ public class Administrator extends Operation {
             String load;
             for (int i = 0; i < tableNames.length; i++) {
                 load = LOAD_DATA + folder + "/" + tableNames[i] + ".txt'" + " INTO TABLE " + tableNames[i];
+                System.out.println(load);
                 stmt.executeUpdate(load);
             }
             stmt.close();
