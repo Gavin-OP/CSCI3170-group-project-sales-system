@@ -81,7 +81,8 @@ public class Page {
         System.out.print("Press ENTER to continue...");
         try {
             new Scanner(System.in).nextLine();
-        } catch (IOException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
