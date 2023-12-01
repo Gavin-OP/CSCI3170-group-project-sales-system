@@ -9,8 +9,12 @@ public class Page {
 
         while (true) {
             System.out.print("Enter Your Choice: ");
-            input = sc.next();
-
+            flag = True
+            while (flag) {
+                if sc.hasNextInt() {
+                    input = sc.nextInt();
+                    flag = False
+            }
             if (!input.matches(".*[a-zA-Z]+.*") && Integer.parseInt(input) >= min && Integer.parseInt(input) <= max) {
                 return Integer.parseInt(input);
             }
