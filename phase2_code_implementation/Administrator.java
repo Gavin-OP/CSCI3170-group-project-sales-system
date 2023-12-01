@@ -127,7 +127,7 @@ public class Administrator extends Operation {
             }
             stmt.close();
             System.out.println("Done! Data is inputted to the database!");
-            System.out.println();
+            // System.out.println();
         } catch (SQLException e) {
             System.err.println();
             System.err.println("Error!");
