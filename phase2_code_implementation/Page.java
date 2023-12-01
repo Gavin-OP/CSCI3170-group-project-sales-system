@@ -5,29 +5,21 @@ import java.io.IOException;
 public class Page {
 
     public static int takeChoiceInput(int min, int max) {
+        String input;
         Scanner sc = new Scanner(System.in);
 
         while (true) {
             System.out.print("Enter Your Choice: ");
+            input = sc.next();
 
-            // Check if the next input is an integer
-            if (sc.hasNextInt()) {
-                int input = sc.nextInt();
-
-                // Check if the integer is within the specified range
-                if (input >= min && input <= max) {
-                    return input;
-                } else {
-                    System.out.println("\nInvalid input. Please enter a valid choice within the specified range.");
-                }
-            } else {
-                // Consume the non-integer input
-                String invalidInput = sc.next();
-                System.out.println("\nInvalid input. Please enter a valid integer.");
+            if (!input.matches(".*[a-zA-Z]+.*") && Integer.parseInt(input) >= min && Integer.parseInt(input) <= max) {
+                return Integer.parseInt(input);
+            }
+            else {
+                System.out.printf("\nInvalid input\n");
             }
         }
     }
-
 
     // public static int takeChoiceInput(int min, int max) {
     //     Scanner sc = new Scanner(System.in);
