@@ -109,6 +109,11 @@ public class Administrator extends Operation {
             System.err.println("Error!");
             System.err.println("Please make sure the folder path is correct and all tables are created");
             System.err.println();
+        } catch (NumberFormatException e) {
+            System.err.println();
+            System.err.println("Error!");
+            System.err.println("Please make sure the folder path is correct and all tables are created");
+            System.err.println();
         }
     }
 

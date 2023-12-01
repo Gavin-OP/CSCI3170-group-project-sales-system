@@ -18,30 +18,7 @@ public class Page {
         }
     }
 
-    // public static int takeChoiceInput(int min, int max) {
-    //     try (Scanner sc = new Scanner(System.in)) {
-    //         while (true) {
-    //             System.out.print("Enter Your Choice: ");
 
-    //             String inputLine = sc.next();
-
-    //             if (!inputLine.isEmpty()) {
-    //                 try {
-    //                     int choice = Integer.parseInt(inputLine);
-    //                     if (choice >= min && choice <= max) {
-    //                         return choice;
-    //                     } else {
-    //                         System.out.printf("\nInvalid input. Please enter a number between %d and %d.\n", min, max);
-    //                     }
-    //                 } catch (NumberFormatException e) {
-    //                     System.out.println("\nInvalid input. Please enter a valid integer.\n");
-    //                 }
-    //             } else {
-    //                 System.out.println("\nNo input detected. Please try again.\n");
-    //             }
-    //         }
-    //     }
-    // }
 
 
 
