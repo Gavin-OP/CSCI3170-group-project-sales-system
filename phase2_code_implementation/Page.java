@@ -59,6 +59,13 @@ public class Page {
         try (Scanner sc = new Scanner(System.in)) {
             return sc.next();
         }
+        catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+            return null;
+        }
+        finally {
+            sc.close(); // Close the Scanner to release resources
+        }
     }
 
     public static void printMainMenu() {
