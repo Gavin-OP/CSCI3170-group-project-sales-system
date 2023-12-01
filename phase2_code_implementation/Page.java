@@ -40,6 +40,9 @@ public class Page {
             } catch (NumberFormatException e) {
                 System.out.println("\nInvalid input. Please enter a valid integer.");
                 sc.nextLine(); // Consume the invalid input to prevent an infinite loop
+            } catch (Exception e) {
+                System.out.println("\nInvalid input. Please enter a valid integer.");
+                sc.nextLine(); // Consume the invalid input to prevent an infinite loop
             }
         }
     }

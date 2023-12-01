@@ -6,18 +6,21 @@ import java.util.Set;
 public class Administrator extends Operation {
     private static final String CREATE_CATEGORY =
             "CREATE TABLE IF NOT EXISTS category (" +
-                    "c_id INT NOT NULL AUTO_INCREMENT," +
-                    "c_name VARCHAR(20) NOT NULL," +
-                    "PRIMARY KEY (c_id)" +
+                    "cID INT NOT NULL AUTO_INCREMENT," +
+                    "cNname VARCHAR(20) NOT NULL," +
+                    "PRIMARY KEY (cID)" +
+                    "CHECK (cID > 0 AND cID <= 9)" +
             ")";
 
     private static final String CREATE_MANUFACTURER =
             "CREATE TABLE IF NOT EXISTS manufacturer (" +
-                    "m_id INT NOT NULL AUTO_INCREMENT," +
-                    "m_name VARCHAR(20) NOT NULL," +
-                    "m_address VARCHAR(50) NOT NULL," +
-                    "m_phone_number INT NOT NULL," +
-                    "PRIMARY KEY (m_id)" +
+                    "mID INT NOT NULL AUTO_INCREMENT," +
+                    "mName VARCHAR(20) NOT NULL," +
+                    "mAddress VARCHAR(50) NOT NULL," +
+                    "mPhoneNumber INT NOT NULL," +
+                    "PRIMARY KEY (mID)" +
+                    "CHECK (mID > 0 AND mID <= 99)" +
+                    "CHECK (mPhoneNumber >= 10000000 AND mPhoneNumber <= 99999999))"
             ")";
 
     private static final String CREATE_PART =
