@@ -37,10 +37,10 @@ public class Administrator extends Operation {
                     "FOREIGN KEY (cID) REFERENCES category(cID)," +
                     "CHECK (pID > 0 AND pID <= 999)," +
                     "CHECK (pPrice > 0 AND pPrice < 100000)," +
-                    "CEHCK (mID > 0 AND mID <= 99)," +
+                    "CHECK (mID > 0 AND mID <= 99)," +
                     "CHECK (cID > 0 AND cID <= 9)," +
                     "CHECK (pWarrantyPeriod > 0 AND pWarrantyPeriod <= 99)," +
-                    "CHECK (pAvailableQuantity >= 0 AND pAvailableQuantity < 100)" +
+                    "CHECK (pAvailableQuantity > 0 AND pAvailableQuantity < 100)" +
             ")";
 
     private static final String CREATE_SALESPERSON =
