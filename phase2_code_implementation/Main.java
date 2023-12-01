@@ -5,7 +5,7 @@ import java.sql.SQLException;
 public class Main extends Page {
 
     // Database credentials
-    private static final String dbAddress = "jdbc:mysql://projgw.cse.cuhk.edu.hk:2633/db26?autoReconnect=true&useSSL=false";
+    private static final String dbAddress = "jdbc:mysql://projgw.cse.cuhk.edu.hk:2633/db26?autoReconnect=true&useSSL=false&allowLoadLocalInfile=true";
     private static final String dbUsername = "Group26";
     private static final String dbPassword = "CSCI3170";
 
