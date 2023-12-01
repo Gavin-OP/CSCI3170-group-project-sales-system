@@ -33,9 +33,9 @@ public class Administrator extends Operation {
                     "pAvailableQuantity INT NOT NULL," +
                     "cID INT NOT NULL," +
                     "mID INT NOT NULL," +
-                    "PRIMARY KEY (pID)," +
-                    "FOREIGN KEY (mID) REFERENCES manufacturer(mID)," +
-                    "FOREIGN KEY (cID) REFERENCES category(cID)" +
+                    "PRIMARY KEY (pID)" +
+                    // "FOREIGN KEY (mID) REFERENCES manufacturer(mID)," +
+                    // "FOREIGN KEY (cID) REFERENCES category(cID)," +
                     // "CHECK (pID > 0 AND pID <= 999)," +
                     // "CHECK (pPrice > 0 AND pPrice < 100000)," +
                     // "CHECK (mID > 0 AND mID <= 99)," +
@@ -63,9 +63,9 @@ public class Administrator extends Operation {
                     "tDate VARCHAR(10) NOT NULL," +
                     "pID INT NOT NULL," +
                     "sID INT NOT NULL," +
-                    "PRIMARY KEY (tID)," +
-                    "FOREIGN KEY (pID) REFERENCES part(pID)," +
-                    "FOREIGN KEY (sID) REFERENCES salesperson(sID)" +
+                    "PRIMARY KEY (tID)" +
+                    // "FOREIGN KEY (pID) REFERENCES part(pID)," +
+                    // "FOREIGN KEY (sID) REFERENCES salesperson(sID)," +
                     // "CHECK (tID > 0 AND tID <= 9999)," +
                     // "CHECK (STR_TO_DATE(tDate, '%d/%m/%Y'))," + 
                     // "CHECK (pID > 0 AND pID <= 999)," +

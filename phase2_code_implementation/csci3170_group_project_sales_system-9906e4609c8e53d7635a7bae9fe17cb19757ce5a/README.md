@@ -1,1 +1,0 @@
-# csci3170_group_project_sales_system
