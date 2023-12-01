@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Administrator extends Operation {
-    // TODO: Check number of digits
     private static final String CREATE_CATEGORY =
             "CREATE TABLE IF NOT EXISTS category (" +
                     "c_id INT NOT NULL AUTO_INCREMENT," +
