@@ -104,10 +104,11 @@ public class Page {
         System.out.println("5. Return to the main menu");
     }
 
+
     public static void pressEnterToContinue() {
         System.out.print("Press ENTER to continue...");
-        try {
-            new Scanner(System.in).nextLine().trim();
+        try (Scanner sc = new Scanner(System.in)) {
+            sc.nextLine(); // Consume the newline character
         } catch (Exception e) {
             e.printStackTrace();
         }
