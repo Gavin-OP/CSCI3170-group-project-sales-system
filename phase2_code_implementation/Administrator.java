@@ -92,7 +92,7 @@ public class Administrator extends Operation {
         System.out.print("Processing...");
         Statement stmt = conn.createStatement();
         for (int i = 0; i < createTables.length; i++) {
-            // System.out.println(createTables[i]);
+            System.out.println(createTables[i]);
             stmt.executeUpdate(createTables[i]);
         }
         stmt.close();
@@ -122,7 +122,7 @@ public class Administrator extends Operation {
             String load;
             for (int i = 0; i < tableNames.length; i++) {
                 load = LOAD_DATA + folder + "/" + tableNames[i] + ".txt'" + " INTO TABLE " + tableNames[i];
-                // System.out.println(load);
+                System.out.println(load);
                 stmt.executeUpdate(load);
             }
             stmt.close();
