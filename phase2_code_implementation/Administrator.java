@@ -29,13 +29,13 @@ public class Administrator extends Operation {
                     "pID INT NOT NULL AUTO_INCREMENT," +
                     "pName VARCHAR(20) NOT NULL," +
                     "pPrice INT NOT NULL," +
+                    "mID INT NOT NULL," +
+                    "cID INT NOT NULL," +
                     "pWarrantyPeriod INT NOT NULL," +
                     "pAvailableQuantity INT NOT NULL," +
-                    "cID INT NOT NULL," +
-                    "mID INT NOT NULL," +
                     "PRIMARY KEY (pID)," +
-                    // "FOREIGN KEY (cID) REFERENCES category(cID)," +
-                    // "FOREIGN KEY (mID) REFERENCES manufacturer(mID)," +
+                    "FOREIGN KEY (cID) REFERENCES category(cID)," +
+                    "FOREIGN KEY (mID) REFERENCES manufacturer(mID)," +
                     "CHECK (pID > 0 AND pID <= 999)," +
                     "CHECK (pPrice > 0 AND pPrice < 100000)," +
                     "CHECK (mID > 0 AND mID <= 99)," +
@@ -60,9 +60,9 @@ public class Administrator extends Operation {
     private static final String CREATE_TRANSACTION =
             "CREATE TABLE IF NOT EXISTS transaction (" +
                     "tID INT NOT NULL AUTO_INCREMENT," +
-                    "tDate VARCHAR(10) NOT NULL," +
                     "pID INT NOT NULL," +
                     "sID INT NOT NULL," +
+                    "tDate VARCHAR(10) NOT NULL," +
                     "PRIMARY KEY (tID)," +
                     // "FOREIGN KEY (pID) REFERENCES part(pID)," +
                     // "FOREIGN KEY (sID) REFERENCES salesperson(sID)," +
