@@ -32,10 +32,8 @@ public class Main extends Page {
                     AdministratorPage.start(conn);
                     break;
                 case 2:
-                    SalespersonPage.start(conn);;
                     break;
                 case 3:
-                    ManagerPage.start(conn);
                     break;
                 default:
                     System.out.println("Bye Bye!");
