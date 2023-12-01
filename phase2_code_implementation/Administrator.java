@@ -10,7 +10,6 @@ public class Administrator extends Operation {
                     "cNname VARCHAR(20) NOT NULL," +
                     "PRIMARY KEY (cID)" +
             ")";
-                    // "CHECK (cID > 0 AND cID <= 9)" +
 
     private static final String CREATE_MANUFACTURER =
             "CREATE TABLE IF NOT EXISTS manufacturer (" +
