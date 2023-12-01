@@ -20,7 +20,7 @@ public class Administrator extends Operation {
                     "mPhoneNumber INT NOT NULL," +
                     "PRIMARY KEY (mID)" +
                     "CHECK (mID > 0 AND mID <= 99)" +
-                    "CHECK (mPhoneNumber >= 10000000 AND mPhoneNumber <= 99999999))"
+                    "CHECK (mPhoneNumber >= 10000000 AND mPhoneNumber <= 99999999)" +
             ")";
 
     private static final String CREATE_PART =
