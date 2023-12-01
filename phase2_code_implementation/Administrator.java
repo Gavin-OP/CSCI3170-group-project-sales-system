@@ -35,13 +35,13 @@ public class Administrator extends Operation {
                     "mID INT NOT NULL," +
                     "PRIMARY KEY (pID)," +
                     "FOREIGN KEY (mID) REFERENCES manufacturer(mID)," +
-                    "FOREIGN KEY (cID) REFERENCES category(cID)," +
-                    "CHECK (pID > 0 AND pID <= 999)," +
-                    "CHECK (pPrice > 0 AND pPrice < 100000)," +
-                    "CHECK (mID > 0 AND mID <= 99)," +
-                    "CHECK (cID > 0 AND cID <= 9)," +
-                    "CHECK (pWarrantyPeriod > 0 AND pWarrantyPeriod <= 99)," +
-                    "CHECK (pAvailableQuantity > 0 AND pAvailableQuantity < 100)" +
+                    "FOREIGN KEY (cID) REFERENCES category(cID)" +
+                    // "CHECK (pID > 0 AND pID <= 999)," +
+                    // "CHECK (pPrice > 0 AND pPrice < 100000)," +
+                    // "CHECK (mID > 0 AND mID <= 99)," +
+                    // "CHECK (cID > 0 AND cID <= 9)," +
+                    // "CHECK (pWarrantyPeriod > 0 AND pWarrantyPeriod <= 99)," +
+                    // "CHECK (pAvailableQuantity > 0 AND pAvailableQuantity < 100)" +
             ")";
 
     private static final String CREATE_SALESPERSON =
@@ -128,7 +128,7 @@ public class Administrator extends Operation {
             stmt.close();
         } catch (SQLException e) {
             System.err.println();
-            System.err.println("Error!");
+            System.err.println("SQL Error!");
             System.err.println("Please make sure the folder path is correct and all tables are created");
             System.err.println();
         } catch (NumberFormatException e) {
