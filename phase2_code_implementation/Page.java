@@ -1,30 +1,35 @@
 import java.util.Scanner;
 
 public class Page {
+
     public static int takeChoiceInput(int min, int max) {
-        String input;
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            while (true) {
+                System.out.print("Enter Your Choice: ");
+                String input = sc.next();
 
-        while (true) {
-            System.out.print("Enter Your Choice: ");
-            input = sc.next();
-
-            if (!input.matches(".*[a-zA-Z]+.*") && Integer.parseInt(input) >= min && Integer.parseInt(input) <= max) {
-                return Integer.parseInt(input);
-            }
-            else {
-                System.out.printf("\nInvalid input\n");
+                try {
+                    int choice = Integer.parseInt(input);
+                    if (choice >= min && choice <= max) {
+                        return choice;
+                    } else {
+                        System.out.printf("\nInvalid input. Please enter a number between %d and %d.\n", min, max);
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("\nInvalid input. Please enter a valid integer.\n");
+                }
             }
         }
     }
 
     public static String takeStringInput() {
-        Scanner sc = new Scanner(System.in);
-        return sc.next();
+        try (Scanner sc = new Scanner(System.in)) {
+            return sc.next();
+        }
     }
 
     public static void printMainMenu() {
-        System.out.println("Welcome to sales system!\n");
+        System.out.println("Welcome to the sales system!\n");
         System.out.println("-----Main menu-----");
         System.out.println("What kinds of operation would you like to perform?");
         System.out.println("1. Operations for administrator");
@@ -65,8 +70,8 @@ public class Page {
         System.out.print("Press ENTER to continue...");
         try {
             System.in.read();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        catch(Exception e)
-        {}
     }
 }
