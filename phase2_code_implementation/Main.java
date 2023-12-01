@@ -5,8 +5,8 @@ import java.sql.SQLException;
 public class Main extends Page {
 
     // Database credentials
-    private static final String dbAddress = "jdbc:mysql://projgw.cse.cuhk.edu.hk:2633/db60?autoReconnect=true&useSSL=false";
-    private static final String dbUsername = "Group60";
+    private static final String dbAddress = "jdbc:mysql://projgw.cse.cuhk.edu.hk:2633/db26?autoReconnect=true&useSSL=false";
+    private static final String dbUsername = "Group26";
     private static final String dbPassword = "CSCI3170";
 
     public static Connection connectToMySQL() {
