@@ -1,4 +1,5 @@
-# CSCI3170 Sales System
+# CSCI3170 Sales System  
+
 ![CSCI3170 simple sales system](https://github.com/Gavin-OP/csci3170_group_project_sales_system/blob/main/Public/Plot/sales_system_welcome.png)  
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
@@ -49,7 +50,7 @@ The system is implemented in Java and SQL. In order to implement the system, you
      - `transaction.txt`  
 
 ## Contributing
-PRs and [issues]() gladly accepted!
+PRs and [issues](https://github.com/Gavin-OP/csci3170_group_project_sales_system/issues) gladly accepted!
 
 ## License
 
