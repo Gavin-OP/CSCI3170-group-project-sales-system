@@ -125,6 +125,7 @@ public class Administrator extends Operation {
                 System.out.println(load);
                 stmt.executeUpdate(load);
             }
+            stmt.close();
         } catch (SQLException e) {
             System.err.println();
             System.err.println("Error!");
@@ -136,7 +137,6 @@ public class Administrator extends Operation {
             System.err.println("Please make sure the folder path is correct and all tables are created");
             System.err.println();
         }
-        stmt.close();
         System.out.println("Done! Data is inputted to the database!");
     }
 
