@@ -57,14 +57,14 @@ public class Page {
 
     public static String takeStringInput() {
         try (Scanner sc = new Scanner(System.in)) {
-            return sc.next();
+            return sc.nextLine();
         }
         catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
             return null;
         }
         finally {
-            sc.close(); // Close the Scanner to release resources
+            // sc.next; // Close the Scanner to release resources
         }
     }
 
