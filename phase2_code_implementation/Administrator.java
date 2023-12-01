@@ -4,56 +4,71 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Administrator extends Operation {
-    // TODO: Check number of digits
     private static final String CREATE_CATEGORY =
             "CREATE TABLE IF NOT EXISTS category (" +
-                    "c_id INT NOT NULL AUTO_INCREMENT," +
-                    "c_name VARCHAR(20) NOT NULL," +
-                    "PRIMARY KEY (c_id)" +
+                    "cID INT NOT NULL AUTO_INCREMENT," +
+                    "cNname VARCHAR(20) NOT NULL," +
+                    "PRIMARY KEY (cID)," +
+                    "CHECK (cID > 0 AND cID <= 9)"
             ")";
 
     private static final String CREATE_MANUFACTURER =
             "CREATE TABLE IF NOT EXISTS manufacturer (" +
-                    "m_id INT NOT NULL AUTO_INCREMENT," +
-                    "m_name VARCHAR(20) NOT NULL," +
-                    "m_address VARCHAR(50) NOT NULL," +
-                    "m_phone_number INT NOT NULL," +
-                    "PRIMARY KEY (m_id)" +
+                    "mID INT NOT NULL AUTO_INCREMENT," +
+                    "mName VARCHAR(20) NOT NULL," +
+                    "mAddress VARCHAR(50) NOT NULL," +
+                    "mPhoneNumber INT NOT NULL," +
+                    "PRIMARY KEY (mID)" +
+                    // "CHECK (mID > 0 AND mID <= 99)" +
+                    // "CHECK (mPhoneNumber >= 10000000 AND mPhoneNumber <= 99999999)" +
             ")";
 
     private static final String CREATE_PART =
             "CREATE TABLE IF NOT EXISTS part (" +
-                    "p_id INT NOT NULL AUTO_INCREMENT," +
-                    "p_name VARCHAR(20) NOT NULL," +
-                    "price INT NOT NULL," +
-                    "manufacturer_id INT NOT NULL," +
-                    "category_id INT NOT NULL," +
-                    "warranty INT NOT NULL," +
-                    "available_quantity INT NOT NULL," +
-                    "PRIMARY KEY (p_id)," +
-                    "FOREIGN KEY (manufacturer_id) REFERENCES manufacturer(m_id)," +
-                    "FOREIGN KEY (category_id) REFERENCES category(c_id)" +
+                    "pID INT NOT NULL AUTO_INCREMENT," +
+                    "pName VARCHAR(20) NOT NULL," +
+                    "pPrice INT NOT NULL," +
+                    "pWarrantyPeriod INT NOT NULL," +
+                    "pAvailableQuantity INT NOT NULL," +
+                    "cID INT NOT NULL," +
+                    "mID INT NOT NULL," +
+                    "PRIMARY KEY (pID)," +
+                    "FOREIGN KEY (mID) REFERENCES manufacturer(mID)," +
+                    "FOREIGN KEY (cID) REFERENCES category(cID)" +
+                    // "CHECK (pID > 0 AND pID <= 999)" +
+                    // "CHECK (pPrice > 0 AND pPrice < 100000)" +
+                    // "CEHCK (mID > 0 AND mID <= 99)" +
+                    // "CHECK (cID > 0 AND cID <= 9)" +
+                    // "CHECK (pWarrantyPeriod > 0 AND pWarrantyPeriod <= 99)" +
+                    // "CHECK (pAvailableQuantity >= 0 AND pAvailableQuantity < 100)" +
             ")";
 
     private static final String CREATE_SALESPERSON =
             "CREATE TABLE IF NOT EXISTS salesperson (" +
-                    "s_id INT NOT NULL AUTO_INCREMENT," +
-                    "s_name VARCHAR(20) NOT NULL," +
-                    "s_address VARCHAR(50) NOT NULL," +
-                    "s_phone_number INT NOT NULL," +
-                    "experience INT NOT NULL," +
-                    "PRIMARY KEY (s_id)" +
+                    "sID INT NOT NULL AUTO_INCREMENT," +
+                    "sName VARCHAR(20) NOT NULL," +
+                    "sAddress VARCHAR(50) NOT NULL," +
+                    "sPhoneNumber INT NOT NULL," +
+                    "sExperience INT NOT NULL," +
+                    "PRIMARY KEY (sID)" +
+                    // "CHECK (sID > 0 AND sID <= 99)" +
+                    // "CEHCK (sPhoneNumber >= 10000000 AND sPhoneNumber <= 99999999)" +
+                    // "CHECK (sExperience >= 1 AND sExperience <= 9)" +
             ")";
 
     private static final String CREATE_TRANSACTION =
             "CREATE TABLE IF NOT EXISTS transaction (" +
-                    "t_id INT NOT NULL AUTO_INCREMENT," +
-                    "part_id INT NOT NULL," +
-                    "salesperson_id INT NOT NULL," +
-                    "date VARCHAR(10) NOT NULL," +
-                    "PRIMARY KEY (t_id)," +
-                    "FOREIGN KEY (part_id) REFERENCES part(p_id)," +
-                    "FOREIGN KEY (salesperson_id) REFERENCES salesperson(s_id)" +
+                    "tID INT NOT NULL AUTO_INCREMENT," +
+                    "tDate VARCHAR(10) NOT NULL," +
+                    "pID INT NOT NULL," +
+                    "sID INT NOT NULL," +
+                    "PRIMARY KEY (tID)," +
+                    "FOREIGN KEY (pID) REFERENCES part(pID)," +
+                    "FOREIGN KEY (sID) REFERENCES salesperson(sID)" +
+                    // "CHECK (tID > 0 AND tID <= 9999)" +
+                    // "CHECK (STR_TO_DATE(tDate, '%d/%m/%Y'))" + 
+                    // "CHECK (pID > 0 AND pID <= 999)" +
+                    // "CHECK (sID > 0 AND sID <= 99)" +
             ")";
 
     private static final String DELETE_TRANSACTION = "DROP TABLE IF EXISTS transaction";
@@ -100,7 +115,6 @@ public class Administrator extends Operation {
             String load;
             for (int i = 0; i < tableNames.length; i++) {
                 load = LOAD_DATA + folder + "/" + tableNames[i] + ".txt'" + " INTO TABLE " + tableNames[i];
-    //            System.out.println(load);
                 stmt.executeUpdate(load);
             }
             stmt.close();
@@ -110,6 +124,12 @@ public class Administrator extends Operation {
             System.err.println("Error!");
             System.err.println("Please make sure the folder path is correct and all tables are created");
             System.err.println();
+        } catch (NumberFormatException e) {
+            System.err.println();
+            System.err.println("Error!");
+            System.err.println("Please make sure the folder path is correct and all tables are created");
+            System.err.println();
+            // catch the error and return to the main menu, break
         }
     }
 
