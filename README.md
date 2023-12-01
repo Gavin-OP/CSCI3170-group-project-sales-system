@@ -1,6 +1,6 @@
 # CSCI3170 Sales System  
 
-![CSCI3170 simple sales system](https://github.com/Gavin-OP/csci3170_group_project_sales_system/blob/main/Public/Plot/sales_system_welcome.png)  
+![CSCI3170 simple sales system](./Public/Plot/sales_system_welcome.png)  
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
@@ -8,8 +8,9 @@ This is a simple sales system for a computer part store to manage the employees,
 
 The system is implemented in Java and SQL. In order to implement the system, you need to have access to CUHK CSE Server or other servers that support Java and SQL. It contains database ER diagrams, Database schema, and Java source code. 
 
-Group members:
+Group 26 members:
 - [ZHANG Haoxiang](emailto:HaoxiangZhang@link.cuhk.edu.hk), 1155141702  
+- Wei Ziqin, 1155173761
 
 ## Table of Contents
 - [Install](https://github.com/Gavin-OP/csci3170_group_project_sales_system/blob/main/README.md#install)
