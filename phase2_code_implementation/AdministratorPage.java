@@ -66,6 +66,9 @@ public class AdministratorPage extends Page {
                     case 4:
                         Administrator.showContent(conn);
                         break;
+                    case 5:
+                        running = false;
+                        break;
                     default:
                         System.out.println("Invalid choice. Please choose a valid option.");
                         break;
