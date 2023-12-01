@@ -9,8 +9,8 @@ public class Administrator extends Operation {
             "CREATE TABLE IF NOT EXISTS category (" +
                     "cID INT NOT NULL AUTO_INCREMENT," +
                     "cNname VARCHAR(20) NOT NULL," +
-                    "PRIMARY KEY (cID)," +
-                    "CHECK (cID > 0 AND cID <= 9)" + 
+                    "PRIMARY KEY (cID)" +
+                    // "CHECK (cID > 0 AND cID <= 9)" + 
             ")";
 
     private static final String CREATE_MANUFACTURER =
@@ -19,9 +19,9 @@ public class Administrator extends Operation {
                     "mName VARCHAR(20) NOT NULL," +
                     "mAddress VARCHAR(50) NOT NULL," +
                     "mPhoneNumber INT NOT NULL," +
-                    "PRIMARY KEY (mID)," +
-                    "CHECK (mID > 0 AND mID <= 99)," +
-                    "CHECK (mPhoneNumber >= 10000000 AND mPhoneNumber <= 99999999)" +
+                    "PRIMARY KEY (mID)" +
+                    // "CHECK (mID > 0 AND mID <= 99)," +
+                    // "CHECK (mPhoneNumber >= 10000000 AND mPhoneNumber <= 99999999)" +
             ")";
 
     private static final String CREATE_PART =
@@ -51,10 +51,10 @@ public class Administrator extends Operation {
                     "sAddress VARCHAR(50) NOT NULL," +
                     "sPhoneNumber INT NOT NULL," +
                     "sExperience INT NOT NULL," +
-                    "PRIMARY KEY (sID)," +
-                    "CHECK (sID > 0 AND sID <= 99)," +
-                    "CHECK (sPhoneNumber >= 10000000 AND sPhoneNumber <= 99999999)," +
-                    "CHECK (sExperience >= 1 AND sExperience <= 9)" +
+                    "PRIMARY KEY (sID)" +
+                    // "CHECK (sID > 0 AND sID <= 99)," +
+                    // "CHECK (sPhoneNumber >= 10000000 AND sPhoneNumber <= 99999999)," +
+                    // "CHECK (sExperience >= 1 AND sExperience <= 9)" +
             ")";
 
     private static final String CREATE_TRANSACTION =
