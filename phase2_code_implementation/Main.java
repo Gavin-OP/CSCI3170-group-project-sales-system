@@ -36,10 +36,10 @@ public class Main extends Page {
                     AdministratorPage.start(conn);
                     break;
                 case 2:
-                    // Add code for case 2
+                    Salesperson.Salesperson_operation();
                     break;
                 case 3:
-                    // Add code for case 3
+                    Manager.Manager_operation();
                     break;
                 default:
                     System.out.println("Bye Bye!");
