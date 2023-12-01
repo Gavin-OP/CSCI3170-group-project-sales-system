@@ -129,6 +129,7 @@ public class Administrator extends Operation {
         } catch (SQLException e) {
             System.err.println();
             System.err.println("SQL Error!");
+            System.err.println(SQLState.get(e.getErrorCode()));
             System.err.println("Please make sure the folder path is correct and all tables are created");
             System.err.println();
         } catch (NumberFormatException e) {
