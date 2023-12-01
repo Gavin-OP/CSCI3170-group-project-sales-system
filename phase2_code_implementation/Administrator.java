@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Administrator extends Operation {
+    // Create tables
     private static final String CREATE_CATEGORY =
             "CREATE TABLE IF NOT EXISTS category (" +
                     "cID INT NOT NULL AUTO_INCREMENT," +
@@ -71,11 +72,14 @@ public class Administrator extends Operation {
                     "CHECK (sID > 0 AND sID <= 99)" +
             ")";
 
+    // Delete tables
     private static final String DELETE_TRANSACTION = "DROP TABLE IF EXISTS transaction";
     private static final String DELETE_SALESPERSON = "DROP TABLE IF EXISTS salesperson";
     private static final String DELETE_PART = "DROP TABLE IF EXISTS part";
     private static final String DELETE_MANUFACTURER = "DROP TABLE IF EXISTS manufacturer;";
     private static final String DELETE_CATEGORY = "DROP TABLE IF EXISTS category";
+
+    // Load data
     private static String currentPath = System.getProperty("user.dir");
     private static final String LOAD_DATA = "LOAD DATA LOCAL INFILE '" + currentPath + "/";
     private static final String[] createTables = {CREATE_CATEGORY, CREATE_MANUFACTURER, CREATE_PART, CREATE_SALESPERSON, CREATE_TRANSACTION};
@@ -87,7 +91,7 @@ public class Administrator extends Operation {
         System.out.print("Processing...");
         Statement stmt = conn.createStatement();
         for (int i = 0; i < createTables.length; i++) {
-//            System.out.println(createTables[i]);
+           System.out.println(createTables[i]);
             stmt.executeUpdate(createTables[i]);
         }
         stmt.close();
@@ -98,7 +102,7 @@ public class Administrator extends Operation {
         System.out.print("Processing...");
         Statement stmt = conn.createStatement();
         for (int i = 0; i < deleteTables.length; i++) {
-//            System.out.println(deleteTables[i]);
+           System.out.println(deleteTables[i]);
             stmt.executeUpdate(deleteTables[i]);
         }
         stmt.close();
