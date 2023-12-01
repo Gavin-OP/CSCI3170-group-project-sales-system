@@ -35,13 +35,13 @@ public class Administrator extends Operation {
                     "mID INT NOT NULL," +
                     "PRIMARY KEY (pID)," +
                     "FOREIGN KEY (mID) REFERENCES manufacturer(mID)," +
-                    "FOREIGN KEY (cID) REFERENCES category(cID)," +
-                    "CHECK (pID > 0 AND pID <= 999)," +
-                    "CHECK (pPrice > 0 AND pPrice < 100000)," +
-                    "CHECK (mID > 0 AND mID <= 99)," +
-                    "CHECK (cID > 0 AND cID <= 9)," +
-                    "CHECK (pWarrantyPeriod > 0 AND pWarrantyPeriod <= 99)," +
-                    "CHECK (pAvailableQuantity > 0 AND pAvailableQuantity < 100)" +
+                    "FOREIGN KEY (cID) REFERENCES category(cID)" +
+                    // "CHECK (pID > 0 AND pID <= 999)," +
+                    // "CHECK (pPrice > 0 AND pPrice < 100000)," +
+                    // "CHECK (mID > 0 AND mID <= 99)," +
+                    // "CHECK (cID > 0 AND cID <= 9)," +
+                    // "CHECK (pWarrantyPeriod > 0 AND pWarrantyPeriod <= 99)," +
+                    // "CHECK (pAvailableQuantity > 0 AND pAvailableQuantity < 100)" +
             ")";
 
     private static final String CREATE_SALESPERSON =
@@ -65,11 +65,11 @@ public class Administrator extends Operation {
                     "sID INT NOT NULL," +
                     "PRIMARY KEY (tID)," +
                     "FOREIGN KEY (pID) REFERENCES part(pID)," +
-                    "FOREIGN KEY (sID) REFERENCES salesperson(sID)," +
-                    "CHECK (tID > 0 AND tID <= 9999)," +
-                    "CHECK (STR_TO_DATE(tDate, '%d/%m/%Y'))," + 
-                    "CHECK (pID > 0 AND pID <= 999)," +
-                    "CHECK (sID > 0 AND sID <= 99)" +
+                    "FOREIGN KEY (sID) REFERENCES salesperson(sID)" +
+                    // "CHECK (tID > 0 AND tID <= 9999)," +
+                    // "CHECK (STR_TO_DATE(tDate, '%d/%m/%Y'))," + 
+                    // "CHECK (pID > 0 AND pID <= 999)," +
+                    // "CHECK (sID > 0 AND sID <= 99)" +
             ")";
     private static final String[] createTables = {CREATE_CATEGORY, CREATE_MANUFACTURER, CREATE_PART, CREATE_SALESPERSON, CREATE_TRANSACTION};
 
