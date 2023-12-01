@@ -1,12 +1,17 @@
 # CSCI3170 Sales System
+![CSCI3170 simple sales system](https://github.com/Gavin-OP/csci3170_group_project_sales_system/blob/main/Public/Plot/sales_system_welcome.png)  
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 This is a simple sales system for a computer part store to manage the employees, transactions, and inventories. 
 
-The system is implemented in Java and SQL. In order to implement the system, you need to have access to CUHK CSE Server or other servers that support Java and SQL. It contains: Database ER diagram, Database schema, Java source code.
+The system is implemented in Java and SQL. In order to implement the system, you need to have access to CUHK CSE Server or other servers that support Java and SQL. It contains database ER diagrams, Database schema, and Java source code.
 
 ## Table of Contents
+- [Install]()
+- [Usage]()
+- [Contributing]()
+- [License]()
 
 ## Install  
 
@@ -26,7 +31,7 @@ The system is implemented in Java and SQL. In order to implement the system, you
     ```bash
     rm -rf *.class
     ```
-2. Compile the java files by using the following command:
+2. Compile the Java files by using the following command:
     ```bash
     javac Main.java
     ```
@@ -35,7 +40,7 @@ The system is implemented in Java and SQL. In order to implement the system, you
     java -classpath ./mysql-jdbc.jar:./ Main
     ```
 4. Follow the instructions on the screen to use the system.
-   - For sample source data folder, please refer to the folder `sample_data`.
+   - For the sample source data folder, please refer to the folder `sample_data`.
    - In the `sample_data`, there are 5 files:
      - `category.txt`  
      - `manufacturer.txt`  
@@ -44,7 +49,7 @@ The system is implemented in Java and SQL. In order to implement the system, you
      - `transaction.txt`  
 
 ## Contributing
-
+PRs and [issues]() gladly accepted!
 
 ## License
 
