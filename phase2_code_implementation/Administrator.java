@@ -99,7 +99,6 @@ public class Administrator extends Operation {
             String load;
             for (int i = 0; i < tableNames.length; i++) {
                 load = LOAD_DATA + folder + "/" + tableNames[i] + ".txt'" + " INTO TABLE " + tableNames[i];
-    //            System.out.println(load);
                 stmt.executeUpdate(load);
             }
             stmt.close();
@@ -114,6 +113,8 @@ public class Administrator extends Operation {
             System.err.println("Error!");
             System.err.println("Please make sure the folder path is correct and all tables are created");
             System.err.println();
+            // catch the error and return to the main menu
+            system.out.println();
         }
     }
 
