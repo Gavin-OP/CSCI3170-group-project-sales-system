@@ -80,11 +80,8 @@ public class Page {
     public static void pressEnterToContinue() {
         System.out.print("Press ENTER to continue...");
         try {
-        if (System.in.available() > 0) {
             System.in.read();
-        }
         } catch (IOException e) {
-        e.printStackTrace();
         }
     }
 }

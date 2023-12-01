@@ -54,7 +54,7 @@ public class AdministratorPage extends Page {
                         break;
                     case 3:
                         Administrator.loadDataFromFiles(conn);
-                        // System.out.println("Data loaded successfully.");
+                        System.out.println("Data loaded successfully.");
                         break;
                     case 4:
                         Administrator.showContent(conn);
