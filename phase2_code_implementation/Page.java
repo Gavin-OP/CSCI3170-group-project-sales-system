@@ -102,7 +102,7 @@ public class Page {
     public static void pressEnterToContinue() {
         System.out.print("Press ENTER to continue...");
         try {
-            new Scanner(System.in).nextLine();
+            new Scanner(System.in).nextLine().trim();
         } catch (Exception e) {
             e.printStackTrace();
         }
