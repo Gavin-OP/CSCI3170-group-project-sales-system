@@ -1,3 +1,10 @@
+//
+// Last modification: 2023-12-13
+//
+// The code is used to implement the Salesperson page.
+// The Salesperson page is used to search for parts and sell parts.
+//
+
 import java.util.Scanner;
 import java.sql.Connection;
 import java.sql.DriverManager;

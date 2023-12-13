@@ -1,3 +1,12 @@
+//
+// writer: ZHANG Haoxiang
+// Last modification: 2023-12-13
+//
+// The code is to take input from the user and call the corresponding function in Administrator.java
+// The code is called by the main page.
+// The code calls the Administrator.java.
+//
+
 import java.sql.Connection;
 import java.sql.SQLException;
 

@@ -2,6 +2,14 @@
 // writer: ZHANG Haoxiang
 // Last modification: 2023-12-13
 //
+// The code is used to implement the Administrator page.
+// The Administrator page is used to create/delete tables, load data from files and show content of tables.
+// The Administrator page is called by the AdministratorPage page.
+// The Administrator page calls the Operation page to execute sql query and display result set.
+// The Administrator page calls the Page page to print the menu and take input from the user.
+// The Administrator page is used by the Administrator.
+// 
+
 import java.sql.*;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -155,33 +163,7 @@ public class Administrator extends Operation {
         String query = "SELECT * FROM " + tableName;
         System.out.println("Content of table " + tableName + ":");
         Operation.display(stmt, query);
-        // display(stmt, query);
         System.out.println();
         stmt.close();
     }
-
-    // public static void display(Statement stmt, String query) {
-    //     ResultSet rs;
-    //     try {
-    //         rs = stmt.executeQuery(query);
-    //         ResultSetMetaData rsmd = rs.getMetaData();
-    //         int colNumber = rsmd.getColumnCount();
-    //         for (int i = 1; i <= colNumber; i++) {
-    //             System.out.print("| " + rsmd.getColumnName(i) + " ");
-    //         }
-    //         System.out.println("|");
-    //         while (rs.next()) {
-    //             for (int i = 1; i <= colNumber; i++) {
-    //                 String colVal = rs.getString(i);
-    //                 System.out.print("| " + colVal + " ");
-    //             }
-    //             System.out.println("|");
-    //         }
-    //     } catch (SQLException e) {
-    //         System.err.println();
-    //         System.err.println("Error!");
-    //         System.err.println("Table does not exist");
-    //     }
-    // }
-
 }

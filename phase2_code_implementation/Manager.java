@@ -1,4 +1,10 @@
-import java.sql.Connection;
+//
+// Last modification: 2023-12-13
+//
+// The code is used to implement the Manager page.
+// The Manager page is used to list all salespersons, count the no. of sales record of each salesperson under a specific range on years of experience, show the total sales value of each manufacturer and show the N most popular part.
+// 
+import java.sql.Connemain page.ction;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
