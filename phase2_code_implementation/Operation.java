@@ -1,3 +1,10 @@
+//
+// writer: ZHANG Haoxiang
+// Last modification: 2023-12-13
+//
+// Class to execute sql query and display result set
+// 
+
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;

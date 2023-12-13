@@ -1,3 +1,7 @@
+//
+// writer: ZHANG Haoxiang
+// Last modification: 2023-12-13
+//
 import java.sql.*;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -113,6 +117,7 @@ public class Administrator extends Operation {
         System.out.println();
     }
 
+    // Load data from files
     public static void loadDataFromFiles(Connection conn) throws SQLException {
         System.out.print("Type in the Source Data Folder Path: ");
         String folder = Page.takeStringInput();
@@ -149,33 +154,34 @@ public class Administrator extends Operation {
         Statement stmt = conn.createStatement();
         String query = "SELECT * FROM " + tableName;
         System.out.println("Content of table " + tableName + ":");
-        display(stmt, query);
+        Operation.display(stmt, query);
+        // display(stmt, query);
         System.out.println();
         stmt.close();
     }
 
-    public static void display(Statement stmt, String query) {
-        ResultSet rs;
-        try {
-            rs = stmt.executeQuery(query);
-            ResultSetMetaData rsmd = rs.getMetaData();
-            int colNumber = rsmd.getColumnCount();
-            for (int i = 1; i <= colNumber; i++) {
-                System.out.print("| " + rsmd.getColumnName(i) + " ");
-            }
-            System.out.println("|");
-            while (rs.next()) {
-                for (int i = 1; i <= colNumber; i++) {
-                    String colVal = rs.getString(i);
-                    System.out.print("| " + colVal + " ");
-                }
-                System.out.println("|");
-            }
-        } catch (SQLException e) {
-            System.err.println();
-            System.err.println("Error!");
-            System.err.println("Table does not exist");
-        }
-    }
+    // public static void display(Statement stmt, String query) {
+    //     ResultSet rs;
+    //     try {
+    //         rs = stmt.executeQuery(query);
+    //         ResultSetMetaData rsmd = rs.getMetaData();
+    //         int colNumber = rsmd.getColumnCount();
+    //         for (int i = 1; i <= colNumber; i++) {
+    //             System.out.print("| " + rsmd.getColumnName(i) + " ");
+    //         }
+    //         System.out.println("|");
+    //         while (rs.next()) {
+    //             for (int i = 1; i <= colNumber; i++) {
+    //                 String colVal = rs.getString(i);
+    //                 System.out.print("| " + colVal + " ");
+    //             }
+    //             System.out.println("|");
+    //         }
+    //     } catch (SQLException e) {
+    //         System.err.println();
+    //         System.err.println("Error!");
+    //         System.err.println("Table does not exist");
+    //     }
+    // }
 
 }

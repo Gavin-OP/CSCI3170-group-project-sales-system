@@ -1,7 +1,7 @@
 import java.sql.Connection;
 import java.sql.SQLException;
 
-// admin page menu
+// Admin menu page takes input from user and call the corresponding function in Administrator.java 
 public class AdministratorPage extends Page {
     public static void start(Connection conn) {
         boolean running = true;

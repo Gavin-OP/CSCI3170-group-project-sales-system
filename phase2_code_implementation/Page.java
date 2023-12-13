@@ -1,10 +1,18 @@
+//
+// writer: ZHANG Haoxiang
+// Last modification: 2023-12-13
+//
+// This file is used to print the menu and take input from the user.
+// The input is then passed to the corresponding function in the main file.
+// The output is then printed in the command line. 
+//
+
 import java.util.Scanner;
 import java.io.IOException;
 
 
-// static menu output
 public class Page {
-
+    // read input from user
     public static int takeChoiceInput(int min, int max) {
         String input;
         Scanner sc = new Scanner(System.in);
@@ -29,7 +37,7 @@ public class Page {
     }
 
 
-
+    // static menu output
     public static void printMainMenu() {
         System.out.println("Welcome to the sales system!\n");
         System.out.println("-----Main menu-----");
@@ -69,6 +77,7 @@ public class Page {
     }
 
 
+    // wait for user to press enter
     public static void pressEnterToContinue() {
         System.out.print("Press ENTER to continue...");
         try {

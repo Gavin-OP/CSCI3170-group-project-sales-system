@@ -1,3 +1,12 @@
+//
+// writer: ZHANG Haoxiang
+// Last modification: 2023-12-13
+//
+// Connect to the database and start the program
+// Print the main menu and take input from the user
+// Call the corresponding function in AdministratorPage.java, Salesperson.java or Manager.java
+//
+
 import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -9,6 +18,7 @@ public class Main extends Page {
     private static final String dbUsername = "Group26";
     private static final String dbPassword = "CSCI3170";
 
+    // Connect to the database
     public static Connection connectToMySQL() {
         Connection con = null;
         try {
@@ -24,6 +34,7 @@ public class Main extends Page {
         return con;
     }
 
+    // Take input from user and call the corresponding function
     public static void main(String[] args) throws SQLException {
         Connection conn = connectToMySQL();
 

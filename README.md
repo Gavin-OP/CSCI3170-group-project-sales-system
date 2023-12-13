@@ -1,6 +1,6 @@
 # CSCI3170 Sales System  
 
-![CSCI3170 simple sales system](./Public/Plot/sales_system_welcome.png)  
+![CSCI3170 simple sales system](./public/plot/sales_system_welcome.png)  
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
