@@ -19,7 +19,7 @@ The system is implemented in Java and SQL. In order to implement the system, you
 1. Get access to CUHK CSE Server or other servers that support Java and SQL.
 2. Clone the repository to your server by using the following command:
     ```bash
-    git clone https://github.com/Gavin-OP/csci3170_group_project_sales_system.git
+    git clone https://github.com/Gavin-OP/CSCI3170-group-project-sales-system.git
     ```
 3. Go to the repository folder by using the following command:
     ```bash
