@@ -9,10 +9,10 @@ This is a simple sales system for a computer part store to manage the employees,
 The system is implemented in Java and SQL. In order to implement the system, you need to have access to CUHK CSE Server or other servers that support Java and SQL. It contains database ER diagrams, Database schema, and Java source code. 
 
 ## Table of Contents
-- [Install](https://github.com/Gavin-OP/csci3170_group_project_sales_system/blob/main/README.md#install)
-- [Usage](https://github.com/Gavin-OP/csci3170_group_project_sales_system/blob/main/README.md#usage)
-- [Contributing](https://github.com/Gavin-OP/csci3170_group_project_sales_system/blob/main/README.md#contributing)
-- [License](https://github.com/Gavin-OP/csci3170_group_project_sales_system/blob/main/README.md#license)
+- [Install](#install)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Install  
 
