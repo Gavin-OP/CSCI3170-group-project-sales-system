@@ -1,4 +1,4 @@
-# CSCI3170 Sales System  
+# CSCI3170 Group Project Sales System  
 
 ![CSCI3170 simple sales system](./public/plot/sales_system_welcome.png)  
 
