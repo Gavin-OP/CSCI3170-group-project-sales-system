@@ -1,0 +1,348 @@
+➜  2023FallProj java -classpath ./mysql-jdbc.jar:./ CSCI3170Proj
+Welcome to sales system!
+
+-----Main menu-----
+What kinds of operation would you like to perform?
+1. Operations for administrator
+2. Operations for salesperson
+3. Operations for manager
+4. Exit this program
+Enter Your Choice: 1
+
+-----Operations for administrator menu-----
+What kinds of operation would you like to perform?
+1. Create all tables
+2. Delete all tables
+3. Load from datafile
+4. Show content of a table
+5. Return to the main menu
+Enter Your Choice: 1
+Processing...Done! Database is initialized!
+
+-----Main menu-----
+What kinds of operation would you like to perform?
+1. Operations for administrator
+2. Operations for salesperson
+3. Operations for manager
+4. Exit this program
+Enter Your Choice: 1
+
+-----Operations for administrator menu-----
+What kinds of operation would you like to perform?
+1. Create all tables
+2. Delete all tables
+3. Load from datafile
+4. Show content of a table
+5. Return to the main menu
+Enter Your Choice: 2
+Processing...Done! Database is removed!
+
+-----Main menu-----
+What kinds of operation would you like to perform?
+1. Operations for administrator
+2. Operations for salesperson
+3. Operations for manager
+4. Exit this program
+Enter Your Choice: 1
+
+-----Operations for administrator menu-----
+What kinds of operation would you like to perform?
+1. Create all tables
+2. Delete all tables
+3. Load from datafile
+4. Show content of a table
+5. Return to the main menu
+Enter Your Choice: 1
+Processing...Done! Database is initialized!
+
+-----Main menu-----
+What kinds of operation would you like to perform?
+1. Operations for administrator
+2. Operations for salesperson
+3. Operations for manager
+4. Exit this program
+Enter Your Choice: 1
+
+-----Operations for administrator menu-----
+What kinds of operation would you like to perform?
+1. Create all tables
+2. Delete all tables
+3. Load from datafile
+4. Show content of a table
+5. Return to the main menu
+Enter Your Choice: 3
+
+Type in the Source Data Folder Path: demo_data
+Processing...Done! Data is inputted to the database!
+
+-----Main menu-----
+What kinds of operation would you like to perform?
+1. Operations for administrator
+2. Operations for salesperson
+3. Operations for manager
+4. Exit this program
+Enter Your Choice: 1
+
+-----Operations for administrator menu-----
+What kinds of operation would you like to perform?
+1. Create all tables
+2. Delete all tables
+3. Load from datafile
+4. Show content of a table
+5. Return to the main menu
+Enter Your Choice: 4
+Which table would you like to show: part
+Content of table part:
+| p_id | p_name | p_price | m_id | c_id | p_quantity | p_warranty |
+| 1 | AMD FX-8320 | 1199 | 2 | 1 | 99 | 36 |
+| 2 | AMD A8 5600K | 710 | 2 | 1 | 99 | 36 |
+| 3 | CORE I3-3250 | 1088 | 1 | 1 | 99 | 36 |
+| 4 | CORE I7-4820K | 2599 | 1 | 1 | 99 | 36 |
+| 5 | GA-H87N-WIFI | 999 | 3 | 2 | 99 | 12 |
+| 6 | G1.SNIPER 5 | 3299 | 3 | 2 | 99 | 12 |
+| 7 | MSI Z87-G43 | 1050 | 4 | 2 | 99 | 12 |
+| 8 | NM70I-1037U | 579 | 5 | 2 | 99 | 12 |
+| 9 | H61-BF UATX | 420 | 1 | 2 | 99 | 12 |
+| 10 | Z87 XPOWER | 3899 | 4 | 2 | 99 | 12 |
+| 11 | 8GB DDR3 | 530 | 6 | 3 | 99 | 60 |
+| 12 | 16GB DDR3 | 1760 | 7 | 3 | 99 | 60 |
+| 13 | SV35 2TB | 730 | 8 | 4 | 99 | 60 |
+| 14 | SSHD 1TB | 720 | 8 | 4 | 99 | 60 |
+| 15 | 256GB NEUTRON | 1650 | 7 | 4 | 99 | 60 |
+| 16 | CX-430M 430W | 399 | 7 | 5 | 99 | 60 |
+| 17 | HCG 520W | 539 | 9 | 5 | 99 | 60 |
+| 18 | NEO ECO 450C-BR | 439 | 9 | 5 | 99 | 60 |
+| 19 | GTX650TI | 1299 | 3 | 6 | 99 | 12 |
+| 20 | HD7770 1GB | 850 | 3 | 6 | 99 | 12 |
+| 21 | N760 HAWK | 2199 | 4 | 6 | 99 | 12 |
+| 22 | R7770-PMD | 899 | 4 | 6 | 99 | 12 |
+| 23 | Sound Blaster Play | 195 | 10 | 7 | 99 | 12 |
+| 24 | Sound Blaster XZ | 1250 | 10 | 7 | 99 | 12 |
+| 25 | AC1200 DB | 1070 | 11 | 8 | 99 | 12 |
+| 26 | N600 Router | 488 | 11 | 8 | 99 | 12 |
+| 27 | HP 2000 2D18TU | 3109 | 12 | 9 | 99 | 18 |
+| 28 | ENVY 17 J002TX | 10898 | 12 | 9 | 99 | 18 |
+| 29 | Probook 440 | 6880 | 12 | 9 | 99 | 18 |
+| 30 | G580G i5 3230 | 4499 | 13 | 9 | 99 | 18 |
+| 31 | Flex 15 Core I5 | 7980 | 13 | 9 | 99 | 18 |
+| 32 | G710A i7 4702 | 6509 | 13 | 9 | 99 | 18 |
+| 33 | Slow 2TB HDD | 2500 | 8 | 4 | 1 | 12 |
+| 34 | Fast 2TB HDD | 5000 | 8 | 4 | 0 | 60 |
+
+-----Main menu-----
+What kinds of operation would you like to perform?
+1. Operations for administrator
+2. Operations for salesperson
+3. Operations for manager
+4. Exit this program
+Enter Your Choice: 2
+
+-----Operations for salesperson menu-----
+What kinds of operation would you like to perform?
+1. Search for parts
+2. Sell a part
+3. Return to the main menu
+Enter Your Choice: 1
+Choose the Search criterion:
+1. Part Name
+2. Manufacturer Name
+Choose the search criterion: 1
+Type in the Search Keyword: Flex 15 Core I5
+Choose ordering:
+1. By price, ascending order
+2. By price, descending order
+Choose the search criterion: 1
+| ID | Name | Manufacturer | Category | Quantity | Warranty | Price |
+| 31 | Flex 15 Core I5 | Lenovo | Notebook | 99 | 18 | 7980 |
+End of Query
+
+-----Main menu-----
+What kinds of operation would you like to perform?
+1. Operations for administrator
+2. Operations for salesperson
+3. Operations for manager
+4. Exit this program
+Enter Your Choice: 2
+
+-----Operations for salesperson menu-----
+What kinds of operation would you like to perform?
+1. Search for parts
+2. Sell a part
+3. Return to the main menu
+Enter Your Choice: 1
+Choose the Search criterion:
+1. Part Name
+2. Manufacturer Name
+Choose the search criterion: 2
+Type in the Search Keyword: AMD
+Choose ordering:
+1. By price, ascending order
+2. By price, descending order
+Choose the search criterion: 2
+| ID | Name | Manufacturer | Category | Quantity | Warranty | Price |
+| 1 | AMD FX-8320 | AMD | CPU | 99 | 36 | 1199 |
+| 2 | AMD A8 5600K | AMD | CPU | 99 | 36 | 710 |
+End of Query
+
+-----Main menu-----
+What kinds of operation would you like to perform?
+1. Operations for administrator
+2. Operations for salesperson
+3. Operations for manager
+4. Exit this program
+Enter Your Choice: 2
+
+-----Operations for salesperson menu-----
+What kinds of operation would you like to perform?
+1. Search for parts
+2. Sell a part
+3. Return to the main menu
+Enter Your Choice: 2
+Enter The Part ID: 31
+Enter The Salesperson ID: 4
+Product: Flex 15 Core I5(id: 31) Remaining Quality: 98
+
+-----Main menu-----
+What kinds of operation would you like to perform?
+1. Operations for administrator
+2. Operations for salesperson
+3. Operations for manager
+4. Exit this program
+Enter Your Choice: 2
+
+-----Operations for salesperson menu-----
+What kinds of operation would you like to perform?
+1. Search for parts
+2. Sell a part
+3. Return to the main menu
+Enter Your Choice: 2
+Enter The Part ID: 36
+Enter The Salesperson ID: 2
+[Error]: This Product is currently out of stock
+
+-----Main menu-----
+What kinds of operation would you like to perform?
+1. Operations for administrator
+2. Operations for salesperson
+3. Operations for manager
+4. Exit this program
+Enter Your Choice: 3
+
+-----Operations for manager menu-----
+What kinds of operation would you like to perform?
+1. List all salespersons
+2. Count the no. of sales record of each salesperson under a specific range on years of experience
+3. Show the total sales value of each manufacturer
+4. Show the N most popular part
+5. Return to the main menu
+Enter Your Choice: 1
+Choose ordering:
+1. By ascending order
+2. By descending order
+Choose the list ordering: 2
+| ID | Name | Mobile Phone | Years of Experience |
+| 6 | Chris Chan | 24815390 | 5 |
+| 2 | John Smith | 28592710 | 3 |
+| 7 | Chris Wong | 28474487 | 3 |
+| 1 | Maria Fortner | 25037060 | 2 |
+| 3 | Colin Carlin | 27689679 | 2 |
+| 5 | Chris Wong | 29125376 | 2 |
+| 4 | Kimberly Wooldridge | 28366016 | 1 |
+
+-----Main menu-----
+What kinds of operation would you like to perform?
+1. Operations for administrator
+2. Operations for salesperson
+3. Operations for manager
+4. Exit this program
+Enter Your Choice: 3
+
+-----Operations for manager menu-----
+What kinds of operation would you like to perform?
+1. List all salespersons
+2. Count the no. of sales record of each salesperson under a specific range on years of experience
+3. Show the total sales value of each manufacturer
+4. Show the N most popular part
+5. Return to the main menu
+Enter Your Choice: 2
+Type in the lower bound for years of experience: 2
+Type in the upper bound for years of experience: 4
+Transaction Record:
+| ID | Name | Years of Experience | Number of Transaction |
+| 7 | Chris Wong | 3 | 9 |
+| 5 | Chris Wong | 2 | 9 |
+| 3 | Colin Carlin | 2 | 9 |
+| 2 | John Smith | 3 | 9 |
+| 1 | Maria Fortner | 2 | 9 |
+End of Query
+
+-----Main menu-----
+What kinds of operation would you like to perform?
+1. Operations for administrator
+2. Operations for salesperson
+3. Operations for manager
+4. Exit this program
+Enter Your Choice: 3
+
+-----Operations for manager menu-----
+What kinds of operation would you like to perform?
+1. List all salespersons
+2. Count the no. of sales record of each salesperson under a specific range on years of experience
+3. Show the total sales value of each manufacturer
+4. Show the N most popular part
+5. Return to the main menu
+Enter Your Choice: 3
+| Manufacturer ID | Manufacturer Name | Total Sales Value |
+| 12 | HP | 40865 |
+| 13 | Lenovo | 12479 |
+| 4 | MSI | 10646 |
+| 7 | Corsair | 9667 |
+| 3 | Gigabyte | 8745 |
+| 11 | Belkin | 6326 |
+| 1 | Intel | 5863 |
+| 10 | Creative | 3475 |
+| 2 | AMD | 3108 |
+| 8 | Seagate | 2910 |
+| 6 | Transcend | 2650 |
+| 9 | Antec | 1856 |
+| 5 | Biostar | 579 |
+End of Query
+
+-----Main menu-----
+What kinds of operation would you like to perform?
+1. Operations for administrator
+2. Operations for salesperson
+3. Operations for manager
+4. Exit this program
+Enter Your Choice: 3
+
+-----Operations for manager menu-----
+What kinds of operation would you like to perform?
+1. List all salespersons
+2. Count the no. of sales record of each salesperson under a specific range on years of experience
+3. Show the total sales value of each manufacturer
+4. Show the N most popular part
+5. Return to the main menu
+Enter Your Choice: 4
+Type in the number of parts: 10
+| Part ID | Part Name | No. of Transaction |
+| 11 | 8GB DDR3 | 5 |
+| 23 | Sound Blaster Play | 5 |
+| 25 | AC1200 DB | 5 |
+| 3 | CORE I3-3250 | 3 |
+| 21 | N760 HAWK | 3 |
+| 16 | CX-430M 430W | 3 |
+| 27 | HP 2000 2D18TU | 3 |
+| 18 | NEO ECO 450C-BR | 3 |
+| 13 | SV35 2TB | 3 |
+| 29 | Probook 440 | 3 |
+End of Query
+
+-----Main menu-----
+What kinds of operation would you like to perform?
+1. Operations for administrator
+2. Operations for salesperson
+3. Operations for manager
+4. Exit this program
+Enter Your Choice: 4
+➜  2023FallProj
